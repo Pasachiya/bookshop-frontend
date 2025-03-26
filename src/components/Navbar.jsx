@@ -62,6 +62,10 @@ export default function Navbar() {
             <span className="nav-text">Contact</span>
             <span className="nav-indicator"></span>
           </Link>
+          <Link to="/admin/login" onClick={() => setMenuOpen(false)}>
+            <span className="nav-text">Admin</span>
+            <span className="nav-indicator"></span>
+          </Link>
         </div>
 
         {/* Icons & Mobile Menu */}
