@@ -1,0 +1,46 @@
+/* .table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.book-table th, .book-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.book-table th {
+  background-color: #f4f4f4;
+}
+
+.book-thumbnail {
+  width: 50px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.add-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.no-books {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+} */

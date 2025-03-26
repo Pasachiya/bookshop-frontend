@@ -1,0 +1,133 @@
+.footer {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    color: #fbbf24;
+    width: 100%;
+    border-top: 1px solid #fbbf24;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-logo {
+    flex: 1 1 250px;
+    max-width: 250px;
+}
+  
+.footer-logo img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #fbbf24;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #f6ad55;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+}
+
+.footer-section ul li a:hover {
+    color: #fbbf24;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    color: #f6ad55;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.social-link:hover {
+    color: #fbbf24;
+}
+
+.footer-bottom {
+    background: #000000;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid rgba(251, 191, 36, 0.1);
+}
+
+.footer-bottom p {
+    color: #f6ad55;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+
+    .footer-logo {
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin: 0 auto 1rem auto;
+        max-width: 150px;
+    }
+
+    .footer-section {
+        flex: 1 1 calc(50% - 1.5rem);
+        min-width: calc(50% - 1.5rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-content {
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}

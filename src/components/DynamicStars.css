@@ -1,0 +1,71 @@
+:root {
+  --star-color-main: rgb(238, 223, 8);
+  --star-color-blue: rgb(173, 216, 230);
+  --star-color-white: rgb(255, 255, 255);
+}
+
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: twinkle 3s infinite alternate;
+  transition: transform 0.3s ease-out;
+}
+
+.star-layer-1 { box-shadow: 0 0 5px var(--star-color-main); background: var(--star-color-main); }
+.star-layer-2 { box-shadow: 0 0 4px var(--star-color-blue); background: var(--star-color-blue); }
+.star-layer-3 { box-shadow: 0 0 3px var(--star-color-white); background: var(--star-color-white); }
+
+.large-star {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--star-color-main);
+  background: var(--star-color-main);
+  animation: twinkle 2s infinite alternate;
+  transition: transform 0.5s ease-out;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(-45deg);
+  box-shadow: 0 0 10px var(--star-color-white);
+  animation: shooting 2s linear infinite;
+  opacity: 0;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translate(0, 0) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-200px, 200px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}

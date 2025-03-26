@@ -1,0 +1,307 @@
+
+.products-container {
+    background: linear-gradient(to bottom, #161616, #000000);
+    color: #f6ad55;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.header-section {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.header-section h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.searchbar {
+    max-width: 600px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #f6ad55;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(246, 173, 85, 0.2);
+}
+
+.searchbar input {
+    width: 100%;
+    padding: 14px 28px;
+    background: transparent;
+    border: none;
+    border-radius: 60px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.searchbar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.searchbar input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.categories-section {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.category-button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-button:hover {
+    background: #f6ad55;
+    color: rgb(0, 0, 0);
+}
+
+.category-button.active {
+    background: #f6ad55;
+    color: rgb(0, 0, 0);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    align-content: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 32px 0;
+    margin: 0 auto;
+}
+
+.pagination-button {
+    padding: 8px 16px;
+    border: 2px solid #f6ad55;
+    background: transparent;
+    color: #f6ad55;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    min-width: 40px;
+}
+
+.pagination-button:hover {
+    background: #f6ad55;
+    color: #000000;
+}
+
+.pagination-button.active {
+    background: #f6ad55;
+    color: #000000;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .header-section {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .header-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+    }
+
+    .searchbar {
+        max-width: 90%;
+        padding: 0 10px;
+    }
+
+    .searchbar input {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .categories-section {
+        gap: 6px;
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+
+    .category-button {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-container {
+        padding: 8px;
+    }
+
+    .header-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .searchbar input {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .categories-section {
+        padding: 0 8px;
+        gap: 4px;
+    }
+
+    .category-button {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 20px 0;
+    }
+
+    .pagination-button {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+        min-width: 30px;
+    }
+
+    .book-card-skeleton {
+        height: 300px;
+        padding: 12px;
+    }
+
+    .skeleton-image {
+        height: 160px;
+    }
+
+    .error-message,
+    .no-results {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+/* Add specific styles for very small devices */
+@media (max-width: 320px) {
+    .header-section h1 {
+        font-size: 1.3rem;
+    }
+
+    .searchbar input {
+        padding: 6px 12px;
+    }
+
+    .category-button {
+        padding: 3px 8px;
+        font-size: 0.75rem;
+    }
+
+    .products-grid {
+        padding: 8px;
+    }
+}
+
+/* Add these styles at the end of your existing CSS file */
+
+.book-card-skeleton {
+    background: #2d3748;
+    border-radius: 8px;
+    padding: 16px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(90deg, #3a4556 0%, #4a5568 50%, #3a4556 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+.skeleton-text {
+    height: 20px;
+    background: linear-gradient(90deg, #3a4556 0%, #4a5568 50%, #3a4556 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+.skeleton-text.short {
+    width: 60%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.error-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #fc8181;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 2rem;
+}

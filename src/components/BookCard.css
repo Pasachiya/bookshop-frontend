@@ -1,0 +1,121 @@
+.book-item {
+  position: relative;
+  width: 280px;
+  max-width:30rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Merienda", serif;
+}
+
+.book-image-wrapper {
+  padding: 15px;
+  height: 340px;
+  width: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-image {
+  border-radius: 0.75rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-details {
+  flex-grow: 1;
+}
+
+.book-author {
+  font-size: 16px;
+  color: #000000;
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+
+.book-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: -15px;
+}
+
+.price-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -6px;
+}
+
+.original-price {
+  font-size: 18px;
+  color: #5f5f5f;
+  text-decoration: line-through;
+  margin-top: 4px;
+}
+
+.current-price {
+  font-size: 25px;
+  font-weight: 700;
+  color: #ff8c00;
+  margin-top: -6px;
+}
+
+.discount-label {
+  display: inline-block;
+  color: rgb(255, 0, 0);
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: -40px;
+}
+
+.wishlist-button {
+  background: none;
+  border: solid 1px #000000;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-icon {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.heart-icon.filled {
+  color: #ff4d4d;
+}
+
+.add-to-cart-button {
+  background-color: #050A37;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+  transition: all 0.3s;
+  font-family: Merienda, cursive;
+  font-style: Semi-Bold;
+}
+
+.add-to-cart-button:hover {
+  background-color: #fea100;
+  color: black;
+}
